@@ -1,6 +1,3 @@
-markdown
-Copy Code
-
 # FórumHub API
 
 ## Visão Geral
