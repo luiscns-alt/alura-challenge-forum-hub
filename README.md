@@ -47,9 +47,7 @@ sql
 
 1. Atualize o arquivo`application.properties`com as credenciais do seu banco de dados:
 
-    ```
-    properties
-    Copy Code
+    ```properties
     spring.datasource.url=jdbc:mysql://localhost:3306/forumhub
     spring.datasource.username=seu_usuario
     spring.datasource.password=sua_senha
@@ -61,19 +59,15 @@ sql
 1. Clone o repositório:
 
     ```shell
-    Copy Code
     git clone https://github.com/seu-usuario/forumhub.git
     cd forumhub
-    
     ```
 
 2. Compile e execute a aplicação usando Maven:
 
     ```bash
-    Copy Code
     mvn clean install
     mvn spring-boot:run
-    
     ```
 
 ## Uso da API
@@ -84,27 +78,23 @@ interagir com a API:
 - **Criar um novo tópico**:
 
     ```bash
-    Copy Code
     curl -X POST http://localhost:8080/topicos -H 'Content-Type: application/json' -d '{"titulo": "Novo Tópico", "conteudo": "Conteúdo do novo tópico"}'
     ```
 
 - **Listar todos os tópicos**:
 
     ```bash
-    Copy Code
     curl -X GET http://localhost:8080/topicos
     ```
 
 - **Atualizar um tópico**:
 
     ```bash
-    Copy Code
     curl -X PUT http://localhost:8080/topicos/{id} -H 'Content-Type: application/json' -d '{"titulo": "Título Atualizado", "conteudo": "Conteúdo atualizado"}'
     ```
 
 - **Deletar um tópico**:
 
     ```bash
-    Copy Code
     curl -X DELETE http://localhost:8080/topicos/{id}
     ```
